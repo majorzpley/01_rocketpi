@@ -1,0 +1,13 @@
+{
+    "clangd.enable": true,
+    "C_Cpp.intelliSenseEngine": "disabled", //关闭智能感知引擎
+    "C_Cpp.formatting": "clangFormat", //使用clangFormat进行代码格式化
+    "C_Cpp.clang_format_style": "Google", //使用Google代码风格
+    "clangd.path": "/usr/local/bin/clangd",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}",
+        "--log=verbose",
+        "--header-insertion=never",
+        "--query-driver=/home/majorzpley/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+    ],
+}
