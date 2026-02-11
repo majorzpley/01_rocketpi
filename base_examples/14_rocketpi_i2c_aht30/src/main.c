@@ -2,15 +2,20 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-30 14:23:31
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-01-31 21:06:56
- * @FilePath: /00_rocketpi_template/src/main.c
- * @Description:此工程为rocketpi模板工程
+ * @LastEditTime: 2026-02-11 14:40:03
+ * @FilePath: /14_rocketpi_i2c_aht30/src/main.c
+ * @Description:面向 RocketPI STM32F401RE开发板的AHT30温湿度演示工程
  * 不用客气，这是你应该谢的!
  * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved.
  */
 
 #include "main.h"
 #include "gpio.h"
+#include "i2c.h"
+#include "usart.h"
+#include <stdio.h>
+
+#include "driver_aht30_test.h"
 
 extern void SystemClock_Config(void);
 
@@ -18,24 +23,15 @@ int main(void) {
   HAL_Init();
   SystemClock_Config();
   MY_GPIO_Init();
+  MY_USART2_UART_Init();
+
+  printf("Initializing AHT30...\r\n");
+  if (aht30_init() != HAL_OK) {
+    printf("AHT30 init failed!\r\n");
+  }
   while (1) {
-    // todo 蓝灯亮
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-    HAL_Delay(500);
-
-    // todo 绿灯亮
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-    HAL_Delay(500);
-
-    // todo 红灯亮
-    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-    HAL_Delay(500);
+    aht30_test_log_measurement();
+    HAL_Delay(1000);
   }
 }
 
