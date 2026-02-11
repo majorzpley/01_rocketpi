@@ -2,7 +2,7 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-31 10:45:41
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-02-11 17:07:58
+ * @LastEditTime: 2026-02-11 20:55:41
  * @FilePath: /15_rocketpi_i2c_at24cxx/readme.md
  * @Description: 
  * 不用客气，这是你应该谢的!
@@ -35,3 +35,5 @@ pio run -t compiledb
 ![alt text](image.png)
 # 四、实验演示
 ![alt text](QQ_1770800870172.png)
+# 五、注意事项
+由于实验需要打印浮点数，所以需要在platformio.ini中显示加入链接选项"-Wl,-u,_printf_float"。
