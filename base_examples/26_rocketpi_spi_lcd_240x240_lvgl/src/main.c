@@ -2,8 +2,9 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-30 14:23:31
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-02-25 19:56:52
- * @FilePath: /26_rocketpi_spi_lcd_240x240_lvgl/src/main.c
+ * @LastEditTime: 2026-02-25 21:30:07
+ * @FilePath:
+ * /01_rocketpi/base_examples/26_rocketpi_spi_lcd_240x240_lvgl/src/main.c
  * @Description:移植lvgl9.2 并适配遥杆作为输入
  * 不用客气，这是你应该谢的!
  * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved.
@@ -19,8 +20,8 @@
 
 #include "demos/lv_demos.h"
 #include "lv_conf.h"
-#include "lvgl/porting/lv_port_disp.h"
-#include "lvgl/porting/lv_port_indev.h"
+#include "porting/lv_port_disp.h"
+#include "porting/lv_port_indev.h"
 #include "st7789.h"
 
 #define ENABLE_ST7789_FPS_TEST 0
