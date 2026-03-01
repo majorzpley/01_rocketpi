@@ -1,0 +1,28 @@
+{
+    "name": "FATFS",
+    "version": "0.0.1",
+    "keywords": "fatfs",
+    "description": "interface files",
+    "repository": {},
+    "build": {
+        "includeDir": ".",
+        "include": [
+            "middlewares",
+            "App",
+            "Target"
+        ],
+        "srcFilter": [
+            "+<*>",
+            "+<middlewares/*.c>",
+            "-<middlewares/drivers>",
+            "-<middlewares/option>",
+            "+<middlewares/option/syscall.c>",
+            "+<App/*.c>",
+            "+<Target/*.c>"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "*",
+    "platforms": "*"
+}
