@@ -2,7 +2,7 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-31 10:45:41
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-03-01 11:40:34
+ * @LastEditTime: 2026-03-02 11:26:38
  * @FilePath: /29_rocketpi_sdio_card_fatfs/readme.md
  * @Description: 
  * 不用客气，这是你应该谢的!
@@ -37,4 +37,7 @@ pio run -t compiledb
 ![alt text](image-2.png)
 ![alt text](c6cd599d1478095c3b0ade4976f48b57.png)
 # 四、已知bug
-目前我移植的fatfs读写速率貌似小了很多，我对比了up的时钟配置是一样的，不知道是哪里出了问题，希望有人帮我找找bug，感谢!!!🙇‍
+~~目前我移植的fatfs读写速率貌似小了很多，我对比了up的时钟配置是一样的，不知道是哪里出了问题，希望有人帮我找找bug，感谢!!!🙇‍~~
+
+更新：找到原因了，分频系数写错了
+![alt text](image-3.png)
