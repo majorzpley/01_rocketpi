@@ -1,0 +1,21 @@
+{
+    "name": "FATFS source code",
+    "version": "0.0.1",
+    "keywords": "fatfs",
+    "description": "interface files",
+    "repository": {},
+    "build": {
+        "includeDir": ".",
+        "srcFilter": [
+            "+<*.c>",
+            "-<drivers>",
+            "-<option>",
+            "+<option/syscall.c>",
+            "+<option/ccsbcs.c>"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "*",
+    "platforms": "*"
+}
