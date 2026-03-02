@@ -2,8 +2,8 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-31 10:45:41
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-03-02 11:26:38
- * @FilePath: /29_rocketpi_sdio_card_fatfs/readme.md
+ * @LastEditTime: 2026-03-02 11:29:41
+ * @FilePath: /01_rocketpi/base_examples/29_rocketpi_sdio_card_fatfs/readme.md
  * @Description: 
  * 不用客气，这是你应该谢的!
  * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
@@ -41,3 +41,4 @@ pio run -t compiledb
 
 更新：找到原因了，分频系数写错了
 ![alt text](image-3.png)
+![alt text](QQ_1772422162215.png)
