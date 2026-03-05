@@ -2,7 +2,7 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-31 10:45:41
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-03-05 20:06:28
+ * @LastEditTime: 2026-03-05 20:18:50
  * @FilePath: /37_rocketpi_esp8266/readme.md
  * @Description: 
  * 不用客气，这是你应该谢的!
@@ -54,3 +54,4 @@ ERROR
 +CWJAP: 4
 ```
 ，暂时不折腾了，可能是我路由器设置的问题，我尝试很久依然没法解决，先上传代码吧，源码应该时没有问题的
+![alt text](QQ_1772713121520.png)
