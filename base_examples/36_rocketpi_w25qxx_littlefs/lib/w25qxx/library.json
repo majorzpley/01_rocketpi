@@ -1,0 +1,18 @@
+{
+    "name": "w25qxx driver",
+    "version": "1.0.0",
+    "keywords": "w25qxx",
+    "description": "libdriver",
+    "repository": {},
+    "build": {
+        "includeDir": ".",
+        "srcFilter": [
+            "+<*.c>",
+            "-<driver_w25qxx_interface_template.c>"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "*",
+    "platforms": "*"
+}
