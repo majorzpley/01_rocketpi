@@ -1,0 +1,22 @@
+{
+    "name": "mbedTLS",
+    "version": "0.0.1",
+    "keywords": "mbedTLS",
+    "description": "interface files",
+    "repository": {},
+    "build": {
+        "includeDir": "include",
+        "include": [
+            "../app"
+        ],
+        "srcFilter": [
+            "-<*.c>",
+            "+<library/*.c>",
+            "+<app/*.c>"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "*",
+    "platforms": "*"
+}
