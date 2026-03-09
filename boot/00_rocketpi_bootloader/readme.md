@@ -2,7 +2,7 @@
  * @Author: majorzpley wyx1214844230@outlook.com
  * @Date: 2026-01-31 10:45:41
  * @LastEditors: majorzpley wyx1214844230@outlook.com
- * @LastEditTime: 2026-03-08 21:43:59
+ * @LastEditTime: 2026-03-09 13:25:22
  * @FilePath: /00_rocketpi_bootloader/readme.md
  * @Description: rocketpi点灯程序，
  * 不用客气，这是你应该谢的!
@@ -44,6 +44,9 @@ pio run -t compiledb
 ## 使用说明
 - 依次编译并下载 boot 与 app 工程（推荐先下载 Bootloader，再下载 App）。
 - 复位开发板，如能看到 LED 闪烁，即表示 Bootloader 完成应用校验与跳转，App 正常运行。
-- 编写合并hex文件的python脚本，一键烧录。
+- 目前只能分开烧录，没有合并hex文件
+- 增加了Makefile
+    - 使用 make upload-seq 可以**一键构建烧写app和bootloader**。
+    - 使用 make clean 可以一键清理。
 ## 实验现象
 <video controls src="VID_20260308_214225.mp4" title="Title"></video>
