@@ -1,0 +1,22 @@
+{
+    "name": "FreeRTOS",
+    "version": "0.0.1",
+    "keywords": "freertos",
+    "description": "freertos for rocketpi",
+    "repository": {},
+    "build": {
+        "includeDir": ".",
+        "include": [],
+        "srcFilter": [
+            "-<**>",
+            "+<Source/CMSIS_RTOS_V2/*.c>",
+            "+<Source/portable/GCC/ARM_CM4F/*.c>",
+            "+<Source/portable/MemMang/heap_4.c>",
+            "+<Source/*.c>"
+        ]
+    },
+    "license": "MIT",
+    "homepage": "",
+    "frameworks": "*",
+    "platforms": "*"
+}
